@@ -1,8 +1,5 @@
 import { Meta, Story } from '@storybook/react';
-import * as React from 'react';
-
 import { Button } from '../Elements';
-
 import { Form } from './Form';
 import { InputField } from './InputField';
 import { SelectField } from './SelectField';

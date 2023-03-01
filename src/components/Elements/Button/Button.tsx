@@ -4,9 +4,10 @@ import { Spinner } from "../Spinner";
 
 
 const variants = {
-  primary: "bg-blue-600 text-white",
-  inverse: "bg-white text-blue-600",
-  danger: "bg-red-600 text-white"
+  primary: "border-blue-600 text-blue-900",
+  secondary: "border-yellow-600 text-yellow-900",
+  contrast: "border-black-600 text-balck-900",
+  danger: "border-red-600 text-red-900"
 };
 
 const sizes = {
@@ -49,7 +50,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         disabled={!!isLoading}
         className={clsx(
-          "flex justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-none hover:opacity-80",
+          "font-medium border border-b-4 border-r-4 border-black rounded-lg hover:shadow-md",
           variants[variant],
           sizes[size],
           className

@@ -20,14 +20,21 @@ Primary.args = {
   variant: "primary"
 }
 
-export const Inverse = Template.bind({});
-Inverse.args = {
-  children: "Inverse Button",
-  variant: "inverse"
+export const Secondary = Template.bind({});
+Secondary.args = {
+  children: "Secondary Button",
+  variant: "secondary"
 }
 
 export const Danger = Template.bind({});
 Danger.args = {
-  children: "Primary Button",
+  children: "Danger Button",
   variant: "danger"
+}
+
+
+export const Contrast = Template.bind({});
+Contrast.args = {
+  children: "Contrast Button",
+  variant: "contrast"
 }
