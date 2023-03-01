@@ -50,7 +50,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         disabled={!!isLoading}
         className={clsx(
-          "font-medium border border-b-4 border-r-4 border-black rounded-lg hover:shadow-md",
+          "font-medium border-2 border-b-4 border-r-4 border-black rounded-lg hover:shadow-md",
           variants[variant],
           sizes[size],
           className
