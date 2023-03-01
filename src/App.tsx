@@ -1,5 +1,11 @@
+import AppProvider from "@/providers/app";
+
 function App() {
-  return (<h1>Hello World</h1>)
+  return (
+    <AppProvider>
+      <h1>Hello World</h1>
+    </AppProvider>
+  )
 }
 
 export default App
