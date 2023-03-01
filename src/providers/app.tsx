@@ -2,6 +2,7 @@ import * as React from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter as Router } from "react-router-dom";
+import { Notifications } from "@/components/Notifications";
 
 
 const ErrorFallback = () => {
@@ -28,6 +29,7 @@ const AppProvider = ({ children }: AppProviderProps) => {
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
+          <Notifications />
           <Router>{children}</Router>
         </HelmetProvider>
       </ErrorBoundary>

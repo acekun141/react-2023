@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import * as React from "react";
+import { Spinner } from "../Spinner";
 
 
 const variants = {
@@ -46,6 +47,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         type={type}
+        disabled={!!isLoading}
         className={clsx(
           "flex justify-center items-center border border-gray-300 disabled:opacity-70 disabled:cursor-not-allowed rounded-md shadow-sm font-medium focus:outline-none hover:opacity-80",
           variants[variant],
@@ -54,7 +56,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         )}
         {...props}
       >
-        {isLoading && <p>Loading...</p>}
+        {isLoading && <Spinner size={size} />}
         {!isLoading && startIcon}
         <span className="mx-2">{props.children}</span>
         {!isLoading && endIcon}
